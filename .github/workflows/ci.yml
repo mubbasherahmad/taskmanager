@@ -39,6 +39,8 @@ jobs:
         echo "Secret 2 is: $JWT_SECRET"
         echo "Secret 3 is: $PORT"
       
+    
+    - name: Stop PM2 (if running)
       run: |
         if pm2 list | grep -q online; then
           pm2 stop all
