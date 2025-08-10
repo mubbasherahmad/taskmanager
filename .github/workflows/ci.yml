@@ -39,12 +39,12 @@ jobs:
         echo "Secret 2 is: $JWT_SECRET"
         echo "Secret 3 is: $PORT"
       
-    run: |
-      if pm2 list | grep -q online; then
-        pm2 stop all
-      else
-        echo "No PM2 processes running."
-      fi
+      run: |
+        if pm2 list | grep -q online; then
+          pm2 stop all
+        else
+          echo "No PM2 processes running."
+        fi
 
     # Install dependencies for backend
     - name: Install Backend Dependencies
