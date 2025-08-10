@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 const sinon = require('sinon');
 const Task = require('../models/Task');
 const { updateTask,getTasks,addTask,deleteTask } = require('../controllers/taskcontroller');
-
 const { expect } = chai;
+
 chai.use(chaiHttp);
 let server;
 let port;
